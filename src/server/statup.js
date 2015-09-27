@@ -1,4 +1,4 @@
-var Boom = require("./packages");
+var Boom = require("./../common/js/packages");
 
 
 Boom.server.StartUp = function () {
@@ -14,6 +14,7 @@ Boom.server.StartUp.prototype = {
 
   addStaticFiles: function () {
     this.app.use(this.express.static('client'));
+    this.app.use(this.express.static('common'));
   },
 
   startListening: function () {
